@@ -1,0 +1,54 @@
+<h1 class="text-center">LivingRoom</h1>
+<div style="margin-top: 40px;" [ngSwitch]="userType" >
+
+
+    <ul  class="list-group list-group-horizontal list-group-numbered wrap-list " *ngSwitchCase = "'default'">
+        <li *ngFor="let e of lr" style="margin-left: 20px;">
+            <div class="card" style="width: 22rem; ">
+                <div class="card-body">
+                    <img [src]="'http://localhost:9090/images/' + e.photo" class="card-img-top" alt="{{e.productName}}" height="200px">
+                  <h5 class="card-title">Name: {{e.productName}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">price: {{e.price}}</h6>
+
+                  <h6 class="card-subtitle mb-2 text-muted">type: {{e.type}}</h6>
+                  
+                  <!-- <button (click) = "updateEmployee(e.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteEmployee(e.id)" class="btn btn-danger" style="margin-left: 15px;">Delete</button> -->
+                </div>
+              </div>
+        </li>
+    </ul>
+    <ul  class="list-group list-group-horizontal list-group-numbered wrap-list " *ngSwitchCase = "'admin'">
+        <li *ngFor="let e of lr" style="margin-left: 20px;">
+            <div class="card" style="width: 22rem; ">
+                <div class="card-body">
+                    <img [src]="'http://localhost:9090/images/' + e.photo" class="card-img-top" alt="{{e.productName}}" height="200px">
+                  <h5 class="card-title">Name: {{e.productName}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">price: {{e.price}}</h6>
+
+                  <h6 class="card-subtitle mb-2 text-muted">type: {{e.type}}</h6>
+                  
+                  <button (click) = "updateEmployee(e.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteEmployee(e.id)" class="btn btn-danger" style="margin-left: 15px;">Delete</button>
+                </div>
+              </div>
+        </li>
+    </ul>
+
+    <ul  class="list-group list-group-horizontal list-group-numbered wrap-list " *ngSwitchCase = "'user'">
+      <li *ngFor="let e of lr" style="margin-left: 20px;">
+          <div class="card" style="width: 22rem; ">
+              <div class="card-body">
+                  <img [src]="'http://localhost:9090/images/' + e.photo" class="card-img-top" alt="{{e.productName}}" height="200px">
+                <h5 class="card-title">Name: {{e.productName}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">price: {{e.price}}</h6>
+
+                <h6 class="card-subtitle mb-2 text-muted">type: {{e.type}}</h6>
+                
+                <button (click)="AddToCart(e.id)" class = "btn btn-info"> Add to Cart</button>
+              <button (click)="buy(e.id)"  class="btn btn-warning" style="margin-left: 15px;">Buy Now</button>
+              </div>
+            </div>
+      </li>
+  </ul>
+</div>

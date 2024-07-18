@@ -1,0 +1,26 @@
+<h1 class="text-center">Add-furniture here</h1>
+
+<div class="container">
+<form (ngSubmit)="submitdata()" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="productName" class="form-label" >Product Name</label>
+      <input type="text" class="form-control" id="productname" name="productName" [(ngModel)]="lr.productName">
+      
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input type="text" class="form-control" id="price" name="price" [(ngModel)]="lr.price">
+    </div>
+    <div class="mb-3">
+        <label for="type" class="form-label">Type</label>
+        <input type="text" class="form-control" id="type" name="type" [(ngModel)]="lr.type">
+      </div>
+      <div class="mb-3">
+        <label for="photo" class="form-label">Upload Image</label>
+        <input type="file" class="form-control" id="photo" name="photo" [(ngModel)]="lr.photo" (change)="onFileChange($event)">
+      </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+</div>

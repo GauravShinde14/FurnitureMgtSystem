@@ -1,0 +1,26 @@
+<h1 class="text-center">Buy furniture here</h1>
+
+<div class="container">
+<form (ngSubmit)="submitdata()" >
+    <div class="mb-3">
+      <label for="bname" class="form-label" >Product Name</label>
+      <input type="text" class="form-control" id="bname" name="bname" [(ngModel)]="bn.bname">
+        
+    </div>
+    <div class="mb-3">
+      <label for="bprice" class="form-label">Price</label>
+      <input type="text" class="form-control" id="bprice" name="bprice" [(ngModel)]="bn.bprice">
+    </div>
+    <div class="mb-3">
+        <label for="btype" class="form-label">Type</label>
+        <input type="text" class="form-control" id="btype" name="btype" [(ngModel)]="bn.btype">
+      </div>
+      <div class="mb-3">
+        <label for="bemail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="bemail" name="bemail" [(ngModel)]="bn.bemail">
+      </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+</div>
